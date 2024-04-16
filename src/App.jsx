@@ -9,21 +9,23 @@ import Transactions from "./pages/Transactions";
 
 import Sidebar from "./components/Sidebar";
 
-import "../src/styles/main.scss";
+import "../src/App.scss";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Sidebar />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/performance" element={<Performance />} />
-          <Route path="/settings" element={<Settings />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/transactions" element={<Transactions />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/performance" element={<Performance />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/transactions" element={<Transactions />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
